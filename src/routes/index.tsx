@@ -94,43 +94,12 @@ function Logo() {
 function Hero() {
   return (
     <section className="relative border-b border-border/70">
-      {/* Minimal top strip — no typical header */}
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 pt-8 text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
-        <span>est. an umbrella of civic initiatives</span>
-        <nav className="hidden items-center gap-6 md:flex">
-          <a href="#projects" className="transition-colors hover:text-foreground">Projects</a>
-          <a href="#principles" className="transition-colors hover:text-foreground">Principles</a>
-          <a href="#contact" className="transition-colors hover:text-foreground">Contact</a>
-        </nav>
-      </div>
-
-      <div className="mx-auto max-w-6xl px-6 pb-20 pt-12 md:pb-28 md:pt-16">
-        {/* Massive wordmark */}
-        <div className="border-b border-border/70 pb-10 md:pb-14">
-          <div className="flex items-baseline gap-4 text-muted-foreground">
-            <span className="text-[11px] uppercase tracking-[0.22em]">Wordmark</span>
-            <span className="h-px flex-1 bg-border" />
-            <span className="text-[11px] uppercase tracking-[0.22em]">2026 —</span>
-          </div>
-          <h1 className="mt-6 select-none text-balance font-semibold tracking-[-0.04em] text-foreground leading-[0.85] text-[22vw] md:text-[18vw] lg:text-[15rem]">
-            S.I.M
-          </h1>
-          <div className="mt-4 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-            <div className="text-2xl font-medium tracking-tight text-foreground md:text-4xl">
-              Smart <span className="text-muted-foreground">·</span> India{" "}
-              <span className="text-muted-foreground">·</span> Movement
-            </div>
-            <div className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
-              An umbrella of civic-tech initiatives
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-16 grid items-center gap-16 md:grid-cols-12">
+      <div className="mx-auto max-w-6xl px-6 pb-20 pt-16 md:pb-28 md:pt-24">
+        <div className="grid items-center gap-16 md:grid-cols-12">
           <div className="md:col-span-7">
-            <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground md:text-5xl">
-              Building the civic infrastructure of an informed India.
-            </h2>
+            <h1 className="text-balance text-4xl font-semibold tracking-tight text-foreground md:text-6xl">
+              Smart India Movement.
+            </h1>
             <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground md:text-lg">
               SIM is a collection of independent yet connected initiatives focused on
               civic awareness, governance, education, public knowledge, and informed
