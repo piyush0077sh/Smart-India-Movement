@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowUpRight, Github, Linkedin, Twitter } from "lucide-react";
+import { ArrowUpRight, Github, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
 import {
   getProjectHref,
@@ -44,6 +44,7 @@ function Index() {
         <Hero />
         <ProjectsSection />
         <Principles />
+        <ConnectSection />
       </main>
       <Footer />
     </div>
@@ -278,6 +279,95 @@ function Principles() {
   );
 }
 
+const connectPlatforms = [
+  {
+    key: "twitter",
+    label: "Twitter / X",
+    handle: "@SmartIndiaMvmt",
+    description: "Updates, civic news, and project announcements.",
+    Icon: Twitter,
+  },
+  {
+    key: "instagram",
+    label: "Instagram",
+    handle: "@smartindiamovement",
+    description: "Visual stories and civic awareness content.",
+    Icon: Instagram,
+  },
+  {
+    key: "github",
+    label: "GitHub",
+    handle: "piyush0077sh",
+    description: "Open-source code behind every SIM project.",
+    Icon: Github,
+  },
+  {
+    key: "linkedin",
+    label: "LinkedIn",
+    handle: "Smart India Movement",
+    description: "Professional updates and civic-tech discussions.",
+    Icon: Linkedin,
+  },
+  {
+    key: "youtube",
+    label: "YouTube",
+    handle: "Smart India Movement",
+    description: "Explainers, walkthroughs, and civic education videos.",
+    Icon: Youtube,
+  },
+];
+
+function ConnectSection() {
+  return (
+    <section id="connect" className="border-b border-border/70">
+      <div className="mx-auto max-w-6xl px-6 py-24">
+        <div className="mb-12 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-2xl">
+            <div className="text-[11px] uppercase tracking-[0.18em] text-muted-foreground">
+              Connect
+            </div>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
+              Follow the movement.
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Stay informed, share ideas, and help spread civic awareness — across every platform.
+            </p>
+          </div>
+          <div className="text-sm text-muted-foreground">Launching soon on all platforms</div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 lg:grid-cols-3">
+          {connectPlatforms.map((platform) => (
+            <div key={platform.key} className="group relative flex flex-col gap-6 bg-card p-8">
+              <div className="flex items-start justify-between">
+                <div className="flex h-9 w-9 items-center justify-center rounded-md border border-border bg-background text-muted-foreground">
+                  <platform.Icon className="h-4 w-4" />
+                </div>
+                <span className="text-[10px] uppercase tracking-[0.16em] text-muted-foreground">
+                  Coming Soon
+                </span>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold tracking-tight text-foreground">
+                  {platform.label}
+                </h3>
+                <p className="mt-1 text-xs text-muted-foreground/70 font-mono">{platform.handle}</p>
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  {platform.description}
+                </p>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-xs text-muted-foreground">Link coming soon</span>
+                <ArrowUpRight className="h-4 w-4 text-muted-foreground/50" />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   const socialLinks = getSocialLinks();
 
@@ -311,7 +401,21 @@ function Footer() {
           <div>
             © {new Date().getFullYear()} {site.name}.
           </div>
-          <div>Made for the public good.</div>
+          <div className="flex items-center gap-4">
+            <span>Made for the public good.</span>
+            <span className="hidden md:inline text-border">·</span>
+            <span>
+              Built by{" "}
+              <a
+                href="https://github.com/piyush0077sh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-foreground/70 underline-offset-2 hover:text-foreground hover:underline transition-colors"
+              >
+                Piyush Singh
+              </a>
+            </span>
+          </div>
         </div>
       </div>
     </footer>
